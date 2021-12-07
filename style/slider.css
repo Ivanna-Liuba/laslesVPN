@@ -1,0 +1,126 @@
+.customers-outer {
+    overflow-x: hidden;
+}
+.slider-item {
+    padding: 30px;
+    max-width: 400px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+}
+.slick-list {
+    overflow: visible;
+}
+.slick-slide {
+    opacity: 0;
+    
+}
+.slick-slide.slick-active {
+    opacity: 1;
+    transition: all 3s;
+}
+
+.slick-current .slider-item {
+    border-color: #F53855;
+    box-shadow: -118px 71px 300px rgba(13, 16, 37, 0.06);
+    margin-right: 41px;
+    float: right;
+    transition: border 1s;
+}
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.slider-dots,
+.slider-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slick-dots,
+.slick-prev, 
+.slick-next {
+    position: static;
+    transform: translate(0,0);
+}
+.slick-dots li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #DDE0E4;
+}
+.slick-dots li:not(:last-child) {
+    margin-right: 15px;
+}
+.slick-dots li.slick-active {
+    width: 45px;
+    background-color: #F53838;
+    border-radius: 10px;
+}
+.slick-dots li button:before {
+    font-size: 0;
+}
+.slick-arrow,
+.slick-arrow:hover.slick-disabled {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #F53838;
+    background-color:#FFFFFF;
+}
+.slick-disabled.slick-prev:before,
+.slick-disabled.slick-next:before {
+    opacity: 0.5;
+}
+.slick-arrow:hover {
+    background-color: #F53838;
+}
+.slick-prev,
+.slick-next {
+    position: static;
+    margin-right: 20px;
+    transform: translate(0,0);
+    opacity: 1;
+}
+.slick-prev:hover,
+.slick-next,
+.slick-disabled.slick-next:hover {
+    transform: scale(-1);
+}
+.slick-prev,
+.slick-next:hover,
+.slick-disabled.slick-prev:hover {
+    transform: scale(1);
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    content: url('../img/slider/actarrow.svg');
+}
+.slick-disabled.slick-prev:hover:before, 
+.slick-disabled.slick-next:hover:before,
+.slick-prev:before, 
+.slick-next:before {
+    content: url('../img/slider/noactarrow.svg');
+}
+.slick-disabled.slick-prev:hover:before, 
+.slick-disabled.slick-next:hover:before,
+.slick-prev:before, 
+.slick-next:before {
+    content: url('../img/slider/noactarrow.svg');
+}
+.slick-prev, 
+.slick-next{
+    opacity: 1;
+}
+.slick-disabled.slick-prev, 
+.slick-disabled.slick-next{
+    opacity: 0.5;
+}
+
+@media (max-width: 960px) {
+    .slick-current .slider-item {
+        float: none;
+        margin: 0 auto;
+    }
+}
